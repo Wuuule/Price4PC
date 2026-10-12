@@ -1,0 +1,34 @@
+{
+  "_note": "格式示例，不参与采集。请替换真实商品、证据 URL、时间及优惠事实。",
+  "offers": [
+    {
+      "product_id": "9700x",
+      "platform": "jd",
+      "title": "AMD Ryzen 7 9700X 盒装CPU",
+      "url": "https://item.jd.com/123456789.html",
+      "evidence_url": "https://item.jd.com/123456789.html",
+      "observed_at": "2026-10-12T09:00:00+08:00",
+      "currency": "CNY",
+      "in_stock": true,
+      "sku_confirmed": true,
+      "base_price": 2000,
+      "shipping": 0,
+      "conditions": "仅用于格式说明；数值不是实际报价",
+      "coupons": [
+        {
+          "label": "公开店铺券（格式示例）",
+          "type": "amount",
+          "value": 100,
+          "threshold": 2000,
+          "group": "shop-coupon",
+          "order": 1,
+          "verified": false,
+          "public": false,
+          "evidence_url": "https://item.jd.com/123456789.html",
+          "starts_at": "2026-11-01T00:00:00+08:00",
+          "ends_at": "2026-11-12T00:00:00+08:00"
+        }
+      ]
+    }
+  ]
+}

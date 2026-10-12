@@ -1,0 +1,70 @@
+name: Price4PC · Collect & Deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 00:17, 04:17, 08:17, 12:17, 16:17, 20:17 UTC (Beijing +8).
+    - cron: '17 */4 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: price4pc-production
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install collector
+        run: pip install -r requirements.txt
+      - name: Verify pricing and parsers
+        run: |
+          python -m unittest discover -s tests -v
+          node --check web/app.js
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+      - name: Collect public prices and deal reports
+        env:
+          PRICE_FEED_URL: ${{ secrets.PRICE_FEED_URL }}
+        run: python scripts/collect.py --browser
+      - name: Preserve history in Git
+        run: |
+          git config user.name 'price4pc-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add web/data
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: refresh price observations [skip ci]'
+            git push
+          fi
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - name: Publish source health summary
+        if: always()
+        run: python scripts/summary.py >> "$GITHUB_STEP_SUMMARY"
+  deploy:
+    needs: collect
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy dashboard
+        id: deployment
+        uses: actions/deploy-pages@v4

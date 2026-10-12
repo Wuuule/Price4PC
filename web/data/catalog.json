@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ultra7-270k",
+    "name": "Intel Core Ultra 7 270K",
+    "category": "CPU",
+    "query": "Intel Ultra 7 270K CPU",
+    "match": "(?<![a-z0-9])270k(?![a-z0-9])",
+    "min": 500,
+    "max": 8000
+  },
+  {
+    "id": "7800x3d",
+    "name": "AMD Ryzen 7 7800X3D",
+    "category": "CPU",
+    "query": "AMD 7800X3D CPU",
+    "match": "(?<![a-z0-9])7800\\s*x3d(?![a-z0-9])",
+    "min": 500,
+    "max": 8000
+  },
+  {
+    "id": "9700x",
+    "name": "AMD Ryzen 7 9700X",
+    "category": "CPU",
+    "query": "AMD 9700X CPU",
+    "match": "(?<![a-z0-9])9700\\s*x(?![a-z0-9])",
+    "min": 300,
+    "max": 6000
+  },
+  {
+    "id": "rx9070xt",
+    "name": "AMD RX 9070 XT",
+    "category": "GPU",
+    "query": "RX9070XT 显卡",
+    "match": "(?<![a-z0-9])9070\\s*xt(?![a-z0-9])",
+    "min": 1500,
+    "max": 15000
+  },
+  {
+    "id": "rtx5070ti",
+    "name": "NVIDIA RTX 5070 Ti",
+    "category": "GPU",
+    "query": "RTX5070Ti 显卡",
+    "match": "(?<![a-z0-9])5070\\s*ti(?![a-z0-9])",
+    "min": 2000,
+    "max": 16000
+  },
+  {
+    "id": "ddr5-16gb",
+    "name": "DDR5 16GB 单条",
+    "category": "RAM",
+    "query": "DDR5 16GB 单条 台式机 内存",
+    "match": "ddr\\s*5",
+    "min": 50,
+    "max": 2000
+  },
+  {
+    "id": "nvme-gen4-1tb",
+    "name": "NVMe PCIe 4.0 1TB M.2",
+    "category": "SSD",
+    "query": "SSD NVMe PCIe4.0 1TB M.2 固态",
+    "match": "(?:pcie|pci-e|pci express)\\s*4(?:\\.0)?",
+    "min": 100,
+    "max": 3000
+  }
+]

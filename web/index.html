@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8fa"><meta name="description" content="Price4PC：京东、淘宝、拼多多 PC 硬件公开价格与优惠报料追踪。CPU、显卡、DDR5、NVMe SSD 历史价格 Dashboard。">
+<title>Price4PC · 把预算花在性能上</title>
+<link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+<script src="./app.js" defer></script>
+</head>
+<body>
+<aside class="sidebar">
+<a class="brand" href="./"><span class="brand-icon">P<span>4</span></span>Price<span>4</span>PC</a>
+<div class="brand-sub">PC 硬件价格雷达</div>
+<nav aria-label="主导航">
+<a class="nav-link active" href="#overview"><span>◫</span>价格总览<span class="nav-tag">LIVE</span></a>
+<a class="nav-link" href="#history"><span>↗</span>历史趋势</a>
+<a class="nav-link" href="#campaign"><span>✧</span>双十一追踪<span class="nav-dot"></span></a>
+<a class="nav-link" href="#sources"><span>⊙</span>采集状态</a>
+</nav>
+<div class="sidebar-label">默认关注清单</div>
+<div class="watch-item"><span class="category-dot cpu"></span>处理器<span>3</span></div>
+<div class="watch-item"><span class="category-dot gpu"></span>显卡<span>2</span></div>
+<div class="watch-item"><span class="category-dot ram"></span>内存<span>1</span></div>
+<div class="watch-item"><span class="category-dot ssd"></span>固态硬盘<span>1</span></div>
+<div class="sidebar-bottom"><div class="mini-grid"><span></span><span></span><span></span><span></span></div><strong>下一台电脑，从好价格开始。</strong><p>自动发现商品<br>留下每一次价格变化</p><a href="https://github.com/Wuuule/Price4PC" target="_blank" rel="noopener noreferrer">GitHub 项目 ↗</a></div>
+</aside>
+<main>
+<header class="topbar"><div><span class="breadcrumb">工作台</span><span class="slash">/</span>价格总览</div><div class="top-actions"><span class="refresh-info" id="refresh-info">正在加载数据</span><button id="refresh" class="icon-button" title="刷新已发布的数据">↻</button><span class="avatar">PC</span></div></header>
+<div class="page-content">
+<section id="overview" class="page-heading"><div><div class="eyebrow"><span class="pulse-dot"></span> BUILD SMART. BUY BETTER.</div><h1>把预算花在性能上<span>.</span></h1><p>关注你的下一套配置，捕捉每一次值得入手的价格。</p></div><button id="export" class="button">↓ 导出历史</button></section>
+<div id="notice" class="notice" hidden role="status"></div>
+<section class="stats" aria-label="追踪概览"><div class="stat"><span>正在追踪</span><strong>7<small>款硬件</small></strong><div>CPU / GPU / RAM / SSD</div><span class="stat-icon">◈</span></div><div class="stat"><span>本次公开报价</span><strong id="offer-count">—</strong><div>匹配规格的页面展示价</div><span class="stat-icon">¥</span></div><div class="stat"><span>确认优惠价</span><strong id="discount-count">—</strong><div>按有来源的公开优惠计算</div><span class="stat-icon">↘</span></div><div class="stat"><span>采集覆盖</span><strong id="coverage-count">—</strong><div id="coverage-label">京东 · 淘宝 · 拼多多</div><span class="stat-icon">◎</span></div></section>
+<section class="panel hardware-panel"><div class="section-heading"><div><h2>硬件价格雷达 <span class="count-badge">7</span></h2><p>显示已采集报价中的最低值，具体 SKU 与资格以平台结算为准。</p></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="搜索型号 / 规格" aria-label="搜索硬件"></label></div>
+<div class="filterbar"><div class="tabs" id="categories" role="group" aria-label="硬件类别"><button data-category="all" class="selected">全部硬件</button><button data-category="CPU">CPU</button><button data-category="GPU">显卡</button><button data-category="RAM">内存</button><button data-category="SSD">SSD</button></div><label class="view-select">价格口径<select id="price-mode"><option value="public">平台公开价</option><option value="calculated">确认优惠价</option><option value="reported">好价报料 · 待验证</option></select></label></div>
+<div class="table-scroll"><table class="hardware-table"><thead><tr><th>商品 / 规格</th><th>京东</th><th>淘宝 / 天猫</th><th>拼多多</th><th>采集最低价</th><th>价格提醒</th><th></th></tr></thead><tbody id="products"></tbody></table></div><div class="table-footer"><span><span class="small-dot"></span> 每 4 小时自动采集 · 北京时间</span><span>页面价 / 确认优惠价 / 报料价分别记录</span></div></section>
+<div class="analytics-grid"><section id="history" class="panel history-panel"><div class="section-heading"><div><h2>好价格，有迹可循</h2><p>按当前价格口径查看每日最低记录</p></div><select id="chart-product" aria-label="历史曲线商品"></select></div><div class="chart-toolbar"><div class="legend"><span><i class="jd"></i>京东</span><span><i class="taobao"></i>淘宝</span><span><i class="pdd"></i>拼多多</span></div><div class="range-tabs"><button data-days="7">7 天</button><button data-days="30" class="selected">30 天</button><button data-days="90">90 天</button></div></div><div id="chart" class="chart-area"></div><div id="history-summary" class="history-summary"></div></section>
+<section class="panel shortlist"><div class="section-heading"><div><h2>你的装机预算</h2><p>选择一款 CPU、显卡，加上内存和 SSD</p></div><span class="round-icon">◈</span></div><div class="build-row"><span>CPU</span><select id="build-cpu" aria-label="装机 CPU"></select></div><div class="build-row"><span>GPU</span><select id="build-gpu" aria-label="装机 GPU"></select></div><div class="build-fixed"><span>DDR5 16GB 单条</span><span>× 1</span></div><div class="build-fixed"><span>PCIe 4.0 NVMe 1TB</span><span>× 1</span></div><div class="budget-total"><span>已采集最低价合计</span><strong id="budget">—</strong><p id="budget-note">等待完整报价后计算</p></div><p class="budget-footnote">仅含这四项硬件；不含主板、电源、机箱及散热。报料模式不计算装机预算。</p></section></div>
+<section id="campaign" class="campaign-panel"><div class="campaign-decoration">11<span>·</span>11</div><div class="campaign-copy"><span class="campaign-badge">双十一 · 活动雷达</span><h2>大促来了，先看价格再下单。</h2><p>自动发现相关优惠报料，记录活动前后价格。未公布的时间与优惠规则保持待确认。</p><a href="https://search.smzdm.com/?c=faxian&s=双11%20电脑硬件&order=time&v=b" target="_blank" rel="noopener noreferrer">查看最新双十一线索 ↗</a></div><div class="campaign-summary"><strong id="campaign-count">0</strong><span>条相关活动 / 报料线索</span><small>报料不等同于可成交价格</small></div></section>
+<section class="panel deals-panel"><div class="section-heading"><div><h2>优惠与活动线索</h2><p>只展示有来源的发现；领取条件、适用平台和时效需核对。</p></div><span class="label-soft">待验证</span></div><div id="deals" class="deals-list"></div></section>
+<section id="sources" class="panel source-panel"><div class="section-heading"><div><h2>采集状态透明可见</h2><p>遇到平台限制时保留历史记录，本次价格显示为空。</p></div><a class="text-link" href="https://github.com/Wuuule/Price4PC/actions" target="_blank" rel="noopener noreferrer">查看 Actions 运行 ↗</a></div><div id="source-summary" class="source-grid"></div><details><summary>展开每个型号的采集结果</summary><div class="table-scroll"><table class="source-table"><thead><tr><th>平台</th><th>商品</th><th>状态</th><th>说明</th><th>检查时间</th></tr></thead><tbody id="source-details"></tbody></table></div></details></section>
+<footer><span class="footer-brand">Price4PC<span> / </span>做一个有依据的装机决定。</span><span>仅已采集来源 · 不保证全平台最低价</span></footer>
+</div></main>
+<dialog id="offer-dialog"><div class="dialog-header"><h2 id="dialog-title">报价明细</h2><button id="close-dialog" class="icon-button" aria-label="关闭">×</button></div><div id="dialog-content"></div></dialog>
+</body></html>

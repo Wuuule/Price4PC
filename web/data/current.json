@@ -1,0 +1,324 @@
+{
+  "updated_at": "2026-10-12T01:39:26Z",
+  "offers": [],
+  "statuses": [
+    {
+      "platform": "jd",
+      "product_id": "ultra7-270k",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.jd.com/Search?keyword=Intel%20Ultra%207%20270K%20CPU&enc=utf-8",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "jd",
+      "product_id": "7800x3d",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.jd.com/Search?keyword=AMD%207800X3D%20CPU&enc=utf-8",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "jd",
+      "product_id": "9700x",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.jd.com/Search?keyword=AMD%209700X%20CPU&enc=utf-8",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "jd",
+      "product_id": "rx9070xt",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.jd.com/Search?keyword=RX9070XT%20%E6%98%BE%E5%8D%A1&enc=utf-8",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "jd",
+      "product_id": "rtx5070ti",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.jd.com/Search?keyword=RTX5070Ti%20%E6%98%BE%E5%8D%A1&enc=utf-8",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "jd",
+      "product_id": "ddr5-16gb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.jd.com/Search?keyword=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98&enc=utf-8",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "jd",
+      "product_id": "nvme-gen4-1tb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.jd.com/Search?keyword=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81&enc=utf-8",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "taobao",
+      "product_id": "ultra7-270k",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://s.taobao.com/search?q=Intel%20Ultra%207%20270K%20CPU",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "taobao",
+      "product_id": "7800x3d",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://s.taobao.com/search?q=AMD%207800X3D%20CPU",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "taobao",
+      "product_id": "9700x",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://s.taobao.com/search?q=AMD%209700X%20CPU",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "taobao",
+      "product_id": "rx9070xt",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://s.taobao.com/search?q=RX9070XT%20%E6%98%BE%E5%8D%A1",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "taobao",
+      "product_id": "rtx5070ti",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://s.taobao.com/search?q=RTX5070Ti%20%E6%98%BE%E5%8D%A1",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "taobao",
+      "product_id": "ddr5-16gb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://s.taobao.com/search?q=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "taobao",
+      "product_id": "nvme-gen4-1tb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://s.taobao.com/search?q=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "pdd",
+      "product_id": "ultra7-270k",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://mobile.yangkeduo.com/search_result.html?search_key=Intel%20Ultra%207%20270K%20CPU",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "pdd",
+      "product_id": "7800x3d",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://mobile.yangkeduo.com/search_result.html?search_key=AMD%207800X3D%20CPU",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "pdd",
+      "product_id": "9700x",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://mobile.yangkeduo.com/search_result.html?search_key=AMD%209700X%20CPU",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "pdd",
+      "product_id": "rx9070xt",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://mobile.yangkeduo.com/search_result.html?search_key=RX9070XT%20%E6%98%BE%E5%8D%A1",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "pdd",
+      "product_id": "rtx5070ti",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://mobile.yangkeduo.com/search_result.html?search_key=RTX5070Ti%20%E6%98%BE%E5%8D%A1",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "pdd",
+      "product_id": "ddr5-16gb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://mobile.yangkeduo.com/search_result.html?search_key=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "pdd",
+      "product_id": "nvme-gen4-1tb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://mobile.yangkeduo.com/search_result.html?search_key=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "ultra7-270k",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=Intel%20Ultra%207%20270K%20CPU&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "7800x3d",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=AMD%207800X3D%20CPU&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "9700x",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=AMD%209700X%20CPU&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "rx9070xt",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=RX9070XT%20%E6%98%BE%E5%8D%A1&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "rtx5070ti",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=RTX5070Ti%20%E6%98%BE%E5%8D%A1&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "ddr5-16gb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "nvme-gen4-1tb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "ultra7-270k",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=Intel%20Ultra%207%20270K%20CPU%20%E5%8F%8C11&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "7800x3d",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=AMD%207800X3D%20CPU%20%E5%8F%8C11&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "9700x",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=AMD%209700X%20CPU%20%E5%8F%8C11&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "rx9070xt",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=RX9070XT%20%E6%98%BE%E5%8D%A1%20%E5%8F%8C11&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "rtx5070ti",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=RTX5070Ti%20%E6%98%BE%E5%8D%A1%20%E5%8F%8C11&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "ddr5-16gb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98%20%E5%8F%8C11&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "nvme-gen4-1tb",
+      "status": "no_matches",
+      "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
+      "url": "https://search.smzdm.com/?c=faxian&s=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81%20%E5%8F%8C11&order=time&v=b",
+      "checked_at": "2026-10-12T01:39:26Z",
+      "count": 0
+    }
+  ],
+  "campaigns": [],
+  "coverage": "仅已采集来源；不代表全平台最低价",
+  "campaign_year": 2026
+}

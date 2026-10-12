@@ -1,3 +1,79 @@
 # Price4PC
 
-PC 硬件价格追踪 Dashboard。项目初始化，完整采集器及部署流程正在开发。
+**把预算花在性能上。** 京东、淘宝/天猫、拼多多 PC 硬件价格追踪 Dashboard，使用 GitHub Actions 采集并保存历史，GitHub Pages 展示。不需要在个人电脑安装开发环境。
+
+## 默认清单
+
+| 类别 | 规格 |
+| --- | --- |
+| CPU | Intel Core Ultra 7 270K、AMD Ryzen 7 7800X3D、9700X |
+| GPU | AMD RX 9070 XT、NVIDIA RTX 5070 Ti |
+| RAM | DDR5 16GB 单条，台式机，不限品牌 |
+| SSD | NVMe PCIe 4.0 1TB M.2，不限品牌 |
+
+270K 按用户提供的精确型号搜索，不自动替换成 265K 等其他型号。排除整机、板 U 套装、二手、配件、混合型号和不明确的内存规格。
+
+## 功能
+
+- 自动按型号搜索三平台，无需先添加商品链接。
+- HTTP + Chromium 渲染采集；页面卡片与 JSON-LD 提取价格。没有实现绕过登录、验证码或平台风控。
+- 额外自动搜索什么值得买的优惠报料；报料价单独显示，不当作平台已确认成交价。
+- **页面价 / 确认优惠价 / 报料价** 三种口径，按口径显示平台最低观察值。
+- 每日最低价历史曲线、7 / 30 / 90 天筛选、CSV 导出、四项硬件装机预算。
+- 浏览器本地目标价提醒：只在页面打开/刷新时检查，非后台推送。
+- 双十一相关报料追踪、活动来源和时效展示；未发布规则不预填。
+- 每个型号的采集成功 / 登录限制 / 风控 / 无匹配 / 网络错误状态。
+- 当前报价只包含最近一次任务成功取得且不超过 24 小时的观察，不用旧价冒充现价。
+
+## 上线
+
+1. 本仓库已包含 `.github/workflows/price4pc.yml`。首次需要在 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。GitHub 首次启用 Pages 要求管理权限，普通 Actions 的 `GITHUB_TOKEN` 无法完成该步骤。
+2. 向 `main` 推送后自动采集、提交历史并部署。也可在 **Actions → Price4PC · Collect & Deploy → Run workflow** 手动触发。
+3. 页面地址：`https://wuuule.github.io/Price4PC/`（以成功部署输出为准）。
+4. 每 4 小时自动运行；北京时间计划为 00:17、04:17、08:17、12:17、16:17、20:17。GitHub 定时任务可能延迟，公共仓库长时间无活动后可能暂停定时任务。
+
+## 数据边界
+
+页面能公开读取多少，系统就明确记录多少。三平台可能要求登录、阻止海外 CI IP 或不公开优惠资格；此时没有有效数据就显示为空。**已采集最低价不等于全平台最低价**。搜索列表价格可能对应默认 SKU，需在平台核对型号和规格。配送费未知的页面价不会被称为确认优惠价。
+
+什么值得买报料是第三方线索，抓取时间并非报料发布时间，可能过期，页面会注明待验证。会员、国补、地区券、支付立减、定向资格等无法公开核实的优惠不自动扣减。该 V1 的公开采集不保证三平台每次都能取得价格，也不保证自动取得全部券后最低成交价。
+
+历史观察保存在 `web/data/history.json`（最近 365 天）及 `web/data/archive/YYYY-MM-DD.json`（完整日归档），数据提交进入 Git 历史。缺失日期不补点、不编造趋势。
+
+## 可配置文件
+
+- `config/products.json`：默认商品、搜索关键词、精确规格匹配和异常价范围。
+- `config/listings.json`：可选商品详情页列表；自动搜索仍会运行。例如：
+
+```json
+[{"product_id":"9700x","platform":"jd","url":"https://item.jd.com/真实SKU.html"}]
+```
+
+- `config/campaigns.json`：有来源的活动规则。例如：
+
+```json
+[{"title":"平台公布的活动名称","platform":"jd","source_url":"https://www.jd.com/真实活动页","starts_at":"2026-11-01T00:00:00+08:00","ends_at":"2026-11-12T00:00:00+08:00","conditions":"真实领取及使用条件"}]
+```
+
+示例只说明格式，初始活动配置为空。不会使用示例数据生成价格。
+
+## 确认优惠价数据接入
+
+如果公开页面未暴露结构化优惠，可接入你有权限使用的价格服务：在仓库 **Settings → Secrets and variables → Actions** 添加 `PRICE_FEED_URL`（HTTPS JSON 端点）。端点 URL 不写入公开数据，也不回显在日志中。无需此配置即可运行公开搜索与报料采集。
+
+数据格式见 [config/feed.example.json](config/feed.example.json)。每条记录必须包含准确 SKU、CNY、库存、24 小时以内的观察时间、平台证据 URL 和明确运费。优惠必须有平台证据、有效期和公开可领取标记。采集器信任授权服务提供的这些事实，不独立登录平台核实，因此页面继续提示核对结算。
+
+优惠按 `order` 顺序计算，门槛在该步骤优惠前检查；`group` 相同的优惠互斥。互斥优惠的最佳选择由数据源作为多个备选 offer 提供，不能把不同券机械叠加。`amount` 为减现金，`rate` 为折后支付比例（0.9 即 9 折），`cap` 为折扣减免上限。支付、国补和会员资格不确认就不计入。不能从营销文案自动猜测优惠叠加规则。
+
+## 开发与验证
+
+```bash
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+node --check web/app.js
+python -m playwright install chromium
+python scripts/collect.py --browser
+python -m http.server 8000 --directory web
+```
+
+零网络初始化：`python scripts/collect.py --no-network`。网页为静态 HTML/CSS/JS，无构建步骤、无浏览器密钥。
