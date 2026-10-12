@@ -53,6 +53,9 @@ def allowed_url(url, hosts):
 
 def matches(title, product):
     title = title.lower().replace('®', '').replace('™', '')
+    title = re.sub(r'\b(rtx|rx)\s*(?=\d)', r'\1 ', title)
+    if product['id'] == 'ultra7-270k' and re.search(r'270k\s*plus', title):
+        return False
     if not re.search(product['match'], title, re.I):
         return False
     # Whole computers, accessories, bundles and used units are not comparable.
@@ -71,7 +74,9 @@ def matches(title, product):
         if not re.search(r'nvme', title) or not re.search(r'm\.?2', title):
             return False
     # Multiple models in one title often mean a cheap default variant.
-    tokens = re.findall(r'(?<![a-z0-9])(?:\d{4}\s*x3d|\d{4}\s*xt|\d{4}\s*ti|\d{4}\s*x|\d{3}\s*k)(?![a-z0-9])', title)
+    tokens = re.findall(r'(?<![a-z0-9])(?:\d{4}(?:\s*x3d|\s*xt|\s*ti|\s*x)?|\d{3}\s*k)(?![a-z0-9])', title)
+    # Clock rates/capacities are excluded from model checks.
+    tokens = [t for t in tokens if re.fullmatch(r'\d{4}', t) is None or t.startswith(('50', '90', '78', '97', '98'))]
     if len(set(t.replace(' ', '') for t in tokens)) > 1:
         return False
     return True
@@ -167,8 +172,10 @@ def parse_page(html, platform, product, source_url, now):
 def page_status(html, offers):
     if offers:
         return 'ok', f'采集 {len(offers)} 条匹配商品'
+    if re.search(r'TencentCaptcha|AliyunCaptcha|WafCaptcha', html):
+        return 'blocked', '公开页面返回人机验证'
     text = BeautifulSoup(html, 'html.parser').get_text(' ', strip=True)
-    if re.search(r'验证码|验证后|安全验证|京东验证|滑块验证|访问过于频繁|访问受限|captcha|risk control', text, re.I):
+    if re.search(r'验证码|验证后|安全验证|京东验证|滑块验证|访问过于频繁|访问受限|人机验证|captcha|risk control', text, re.I):
         return 'blocked', '平台安全验证或访问限制'
     if re.search(r'请登录|登录后|扫码登录|登录淘宝|登录拼多多', text):
         return 'login_required', '需要平台登录才能读取价格'
@@ -289,6 +296,15 @@ def main():
         platform, product, url, _ = job
         rows.extend(found)
         statuses.append({'platform': platform, 'product_id': product['id'], 'status': status, 'message': message, 'url': url, 'checked_at': now, 'count': len(found)})
+    # Public secondary sources supply dated, explicitly unverified deal references.
+    references = []
+    if not args.no_network:
+        from secondary import collect_sources, recent_report
+        references, secondary_statuses = collect_sources(load(ROOT/'config/secondary-sources.json', {}), products, now, offer, matches, HEADERS)
+        statuses.extend(secondary_statuses)
+        rows.extend(r for r in references if not r['reference_only'])
+    # Undated search-list reports must not silently become current prices.
+    rows = [r for r in rows if r['price_kind'] != 'reported' or r.get('reported_at')]
     # Optional authorized data provider; a secret URL is never published in output.
     feed_url = os.environ.get('PRICE_FEED_URL')
     if feed_url and not args.no_network:
@@ -311,22 +327,24 @@ def main():
     offers = list({row['id']: row for row in rows}.values())
     # Current offers contain ONLY this run's results. Prior offers remain in history.
     history = load(DATA/'history.json', [])
-    seen = {(r['id'], r['observed_at'], r['final_price'], r['price_kind']) for r in history}
-    for row in offers:
-        if (row['id'], row['observed_at'], row['final_price'], row['price_kind']) not in seen:
-            history.append({k: row.get(k) for k in ('id', 'product_id', 'platform', 'merchant_platform', 'final_price', 'base_price', 'price_kind', 'observed_at', 'url', 'title')})
+    seen = {(r['id'], r.get('reported_at') or r['observed_at'], r['final_price'], r['price_kind']) for r in history}
+    for row in list({r['id']: r for r in offers + references}.values()):
+        key = (row['id'], row.get('reported_at') or row['observed_at'], row['final_price'], row['price_kind'])
+        if key not in seen:
+            seen.add(key)
+            history.append({k: row.get(k) for k in ('id', 'product_id', 'platform', 'merchant_platform', 'final_price', 'base_price', 'price_kind', 'observed_at', 'reported_at', 'reference_only', 'url', 'title')})
     # Archive is append-only in the repository; browser history is rolling 365d.
     archive = DATA/'archive'/f'{now[:10]}.json'
     previous = load(archive, [])
     archive_keys = {(r['id'], r['observed_at']) for r in previous}
-    previous.extend(r for r in offers if (r['id'], r['observed_at']) not in archive_keys)
+    previous.extend(r for r in list({o['id']:o for o in offers + references}.values()) if (r['id'], r['observed_at']) not in archive_keys)
     if previous:
         save(archive, previous)
     cutoff = (datetime.now(timezone.utc)-timedelta(days=365)).isoformat().replace('+00:00', 'Z')
     history = [r for r in history if r['observed_at'] >= cutoff]
     campaigns = [c for c in load(ROOT/'config/campaigns.json', []) if c.get('source_url') and active(c.get('starts_at'), c.get('ends_at'))]
     save(DATA/'catalog.json', products)
-    save(DATA/'current.json', {'updated_at': now, 'offers': offers, 'statuses': statuses, 'campaigns': campaigns,
+    save(DATA/'current.json', {'updated_at': now, 'offers': offers, 'reference_offers': references, 'statuses': statuses, 'campaigns': campaigns,
                              'coverage': '仅已采集来源；不代表全平台最低价', 'campaign_year': datetime.now(timezone.utc).year})
     save(DATA/'history.json', history)
     print(json.dumps({'offers': len(offers), 'sources': len(statuses), 'ok': sum(s['status']=='ok' for s in statuses)}, ensure_ascii=False))

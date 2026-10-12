@@ -4,18 +4,19 @@ const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'
 const safeURL = value => { try { const url = new URL(value); return ['http:', 'https:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } };
 const yuan = value => value == null ? '—' : '¥' + Number(value).toLocaleString('zh-CN', {maximumFractionDigits:2});
 const dateLabel = value => value ? new Date(value).toLocaleString('zh-CN', {timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}) : '尚未采集';
-const names = {jd:'京东',taobao:'淘宝 / 天猫',pdd:'拼多多',smzdm:'好价报料',feed:'授权数据源'};
-const statusNames = {ok:'有数据',blocked:'访问受限',login_required:'需登录',no_matches:'无匹配',error:'连接失败',not_run:'待采集'};
+const names = {jd:'京东',taobao:'淘宝 / 天猫',pdd:'拼多多',smzdm:'什么值得买',manmanbuy:'慢慢买',miaomiaozhe:'喵喵折',feed:'授权数据源'};
+const statusNames = {ok:'有数据',blocked:'访问受限',login_required:'需登录',no_matches:'无匹配',error:'连接失败',not_run:'待采集',needs_link:'需商品链接'};
 const kinds = {listed:'页面展示价',calculated:'确认优惠价',reported:'报料价 · 待验证'};
 const colors = {jd:'#ee7459',taobao:'#6792e7',pdd:'#91bead'};
 const icons = {CPU:'▦',GPU:'▤',RAM:'▥',SSD:'▣'};
+let initialized = false;
 let catalog = [], current = {offers:[],statuses:[],campaigns:[]}, history = [], category = 'all', days = 30;
 let targets = {};
 try { targets = JSON.parse(localStorage.getItem('price4pc-targets') || '{}'); } catch { /* Storage may be disabled. */ }
 
 function currentOffers() {
   const now = Date.now();
-  return (current.offers || []).filter(o => now-new Date(o.observed_at).getTime() >= 0 && now-new Date(o.observed_at).getTime() < 24*3600000 && (!o.coupon_expires_at || new Date(o.coupon_expires_at).getTime() > now));
+  return (current.offers || []).filter(o => now-new Date(o.observed_at).getTime() >= 0 && now-new Date(o.observed_at).getTime() < 24*3600000 && (o.price_kind !== 'reported' || (o.reported_at && !o.reference_only && o.report_state !== 'expired' && now-new Date(o.reported_at).getTime()>=0 && now-new Date(o.reported_at).getTime()<=72*3600000)) && (!o.coupon_expires_at || new Date(o.coupon_expires_at).getTime() > now));
 }
 function modeMatches(offer) {
   const mode = $('price-mode').value;
@@ -27,7 +28,11 @@ function offersFor(id, platform) {
 function cell(o, best=false) {
   return o ? `<span class="price ${best ? 'best-price' : ''}"><small>¥</small>${Number(o.final_price).toLocaleString('zh-CN',{maximumFractionDigits:2})}</span>${best ? `<span class="best-platform">${escapeHTML(names[o.merchant_platform || o.platform] || '平台未确认')}</span>` : ''}` : '<span class="empty-price">暂无有效报价</span>';
 }
+function updateModeLabel() {
+  $('lowest-label').textContent = $('price-mode').value==='reported' ? '报料参考最低价' : '采集最低价';
+}
 function renderProducts() {
+  updateModeLabel();
   const query = $('search').value.toLowerCase();
   const products = catalog.filter(p => (category==='all' || p.category===category) && (p.name+' '+p.query).toLowerCase().includes(query));
   $('products').innerHTML = products.map(p => {
@@ -38,7 +43,7 @@ function renderProducts() {
 }
 function renderStats() {
   const offers = currentOffers();
-  $('offer-count').textContent = offers.filter(o => o.price_kind!=='reported').length;
+  $('offer-count').textContent = offers.length;
   $('discount-count').textContent = offers.filter(o => o.price_kind==='calculated').length;
   const ok = new Set((current.statuses || []).filter(s=>s.status==='ok' && ['jd','taobao','pdd'].includes(s.platform)).map(s=>s.platform));
   $('coverage-count').innerHTML = `${ok.size}<small>/ 3 个平台</small>`;
@@ -47,6 +52,7 @@ function renderStats() {
   const last = new Date(current.updated_at).getTime();
   const allEmpty = offers.length === 0;
   $('notice').hidden = !allEmpty && !(Date.now()-last>24*3600000);
+  if ($('price-mode').value==='reported' && !allEmpty) { $('notice').hidden=false; $('notice').textContent='当前展示什么值得买近 72 小时的报料参考价，需核对平台结算；旧报料另列在下方，不计入当前最低价。'; }
   if (allEmpty) $('notice').textContent = '当前没有可用的实时价格。下方可查看各平台采集状态；自动任务会继续尝试，历史记录仍然保留。';
   else if (Date.now()-last>24*3600000) $('notice').textContent = '最近采集已超过 24 小时，过期报价已从当前价格中移除。请查看 Actions 任务状态。';
 }
@@ -77,12 +83,12 @@ function renderBudget() {
 }
 function renderChart() {
   const id = $('chart-product').value, cutoff = Date.now()-days*86400000;
-  const rows = history.filter(o=>o.product_id===id && modeMatches(o) && new Date(o.observed_at).getTime() >= cutoff && new Date(o.observed_at).getTime() <= Date.now());
+  const rows = history.filter(o=>o.product_id===id && modeMatches(o) && new Date(o.reported_at || o.observed_at).getTime() >= cutoff && new Date(o.reported_at || o.observed_at).getTime() <= Date.now());
   const aggregates = {};
   for (const row of rows) {
     const platform = row.price_kind==='reported' ? row.merchant_platform : row.platform;
     if (!colors[platform]) continue;
-    const day = new Date(row.observed_at).toLocaleDateString('en-CA',{timeZone:'Asia/Shanghai'});
+    const day = new Date(row.reported_at || row.observed_at).toLocaleDateString('en-CA',{timeZone:'Asia/Shanghai'});
     const key = platform+day;
     if (!aggregates[key] || row.final_price<aggregates[key].price) aggregates[key] = {platform, day, price:row.final_price, time:new Date(day+'T12:00:00+08:00').getTime()};
   }
@@ -120,17 +126,18 @@ function renderChart() {
   $('history-summary').innerHTML=`<span>区间最低<strong>${yuan(min)}</strong></span><span>区间最高<strong>${yuan(max)}</strong></span><span>有效记录<strong>${rows.length}</strong></span>`;
 }
 function renderDeals() {
-  const campaigns = current.campaigns || [], offers = currentOffers().filter(o=>o.price_kind==='reported').sort((a,b)=>a.final_price-b.final_price);
-  const relevant = offers.filter(o=>/双.?11|双十一|11\.11/.test(o.title+' '+o.conditions));
+  const campaigns = current.campaigns || [], offers = (current.reference_offers || currentOffers().filter(o=>o.price_kind==='reported')).slice().sort((a,b)=>(b.reported_at || '').localeCompare(a.reported_at || ''));
+  const recent = currentOffers().filter(o=>o.price_kind==='reported');
+  const relevant = recent.filter(o=>/双.?11|双十一|11\.11/.test(o.title+' '+o.conditions));
   $('campaign-count').textContent = campaigns.length + relevant.length;
-  $('deals').innerHTML = [...campaigns.map(c=>`<a class="deal" href="${escapeHTML(safeURL(c.source_url))}" target="_blank" rel="noopener noreferrer"><div><strong>${escapeHTML(c.title)}</strong><p>${escapeHTML(c.conditions || '')} · ${escapeHTML(names[c.platform] || '')} · ${dateLabel(c.starts_at)} — ${dateLabel(c.ends_at)}</p></div><span class="deal-price">↗<small>查看来源</small></span></a>`), ...offers.slice(0,12).map(o=>`<a class="deal" href="${escapeHTML(safeURL(o.url))}" target="_blank" rel="noopener noreferrer"><div><strong>${escapeHTML(o.title)}</strong><p>${escapeHTML(names[o.merchant_platform] || '平台未确认')} · ${escapeHTML(o.conditions)} · 抓取 ${dateLabel(o.observed_at)}${o.reported_date_text ? ' · 报料时间 '+escapeHTML(o.reported_date_text) : ''}</p></div><span class="deal-price">${yuan(o.final_price)}<small>报料价 · 待验证 ↗</small></span></a>`)].join('') || '<div class="empty-state">尚未采集到匹配的有效活动或报料。自动任务会持续搜索，不预填优惠规则。</div>';
+  $('deals').innerHTML = [...campaigns.map(c=>`<a class="deal" href="${escapeHTML(safeURL(c.source_url))}" target="_blank" rel="noopener noreferrer"><div><strong>${escapeHTML(c.title)}</strong><p>${escapeHTML(c.conditions || '')} · ${escapeHTML(names[c.platform] || '')} · ${dateLabel(c.starts_at)} — ${dateLabel(c.ends_at)}</p></div><span class="deal-price">↗<small>查看来源</small></span></a>`), ...offers.slice(0,12).map(o=>`<a class="deal" href="${escapeHTML(safeURL(o.url))}" target="_blank" rel="noopener noreferrer"><div><strong>${escapeHTML(o.title)}</strong><p>${escapeHTML(names[o.merchant_platform] || '平台未确认')} · ${escapeHTML(o.conditions)} · 抓取 ${dateLabel(o.observed_at)}${o.reported_date_text ? ' · 报料时间 '+escapeHTML(o.reported_date_text) : ''}</p></div><span class="deal-price">${yuan(o.final_price)}<small>${o.reference_only?'旧报料参考 · 不计当前价':'近期报料 · 待验证'} ↗</small></span></a>`)].join('') || '<div class="empty-state">尚未采集到匹配的有效活动或报料。自动任务会持续搜索，不预填优惠规则。</div>';
 }
 function renderSources() {
   const statuses = current.statuses || [];
-  $('source-summary').innerHTML = ['jd','taobao','pdd','smzdm'].map(platform=>{
+  $('source-summary').innerHTML = ['jd','taobao','pdd','smzdm','manmanbuy','miaomiaozhe'].map(platform=>{
     const rows=statuses.filter(s=>s.platform===platform), ok=rows.filter(s=>s.status==='ok').length;
     const allPending=!rows.length || rows.every(s=>s.status==='not_run');
-    return `<div class="source-card"><div><strong>${names[platform]}</strong><span class="status-pill ${ok?'ok':allPending?'':'warn'}">${ok?'部分 / 全部成功':allPending?'等待首次采集':'未获得价格'}</span></div><p>${ok} / ${rows.length} 个查询成功 · ${rows.reduce((n,s)=>n+(s.count||0),0)} 条报价</p></div>`;
+    return `<div class="source-card"><div><strong>${names[platform]}</strong><span class="status-pill ${ok?'ok':allPending?'':'warn'}">${ok?'部分 / 全部成功':allPending?'等待首次采集':rows.some(r=>r.status==='needs_link')?'需商品链接':'未获得价格'}</span></div><p>${ok} / ${rows.length} 个查询成功 · ${rows.reduce((n,s)=>n+(s.count||0),0)} 条报价</p></div>`;
   }).join('');
   $('source-details').innerHTML=statuses.map(s=>`<tr><td>${escapeHTML(names[s.platform] || s.platform)}</td><td>${escapeHTML(catalog.find(p=>p.id===s.product_id)?.name || '数据接口')}</td><td><span class="status-pill ${s.status==='ok'?'ok':'warn'}">${escapeHTML(statusNames[s.status] || s.status)}</span></td><td>${escapeHTML(s.message)}</td><td>${dateLabel(s.checked_at)}</td></tr>`).join('');
 }
@@ -153,6 +160,8 @@ async function loadData() {
     }));
     if(!Array.isArray(results[0]) || !Array.isArray(results[2]) || !Array.isArray(results[1].offers)) throw new Error('数据格式不正确');
     [catalog,current,history]=results;
+    if (!initialized && current.offers.some(o=>o.price_kind==='reported')) $('price-mode').value='reported';
+    initialized=true;
     fillSelects(); renderStats(); renderProducts(); renderChart(); renderDeals(); renderSources();
   } catch(error) {
     $('notice').hidden=false;
@@ -164,7 +173,7 @@ async function loadData() {
 }
 $('refresh').addEventListener('click',loadData);
 $('search').addEventListener('input',renderProducts);
-$('price-mode').addEventListener('change',()=>{renderProducts();renderChart();});
+$('price-mode').addEventListener('change',()=>{renderProducts();renderChart();renderStats();updateModeLabel();});
 $('categories').addEventListener('click',event=>{
   const button=event.target.closest('[data-category]'); if(!button) return;
   category=button.dataset.category;
@@ -189,7 +198,7 @@ document.querySelector('.range-tabs').addEventListener('click',event=>{const but
 $('close-dialog').addEventListener('click',()=>$('offer-dialog').close());
 $('offer-dialog').addEventListener('click',event=>{if(event.target===$('offer-dialog')) { const r=event.target.getBoundingClientRect();if(event.clientX<r.left || event.clientX>r.right || event.clientY<r.top || event.clientY>r.bottom)event.target.close(); }});
 $('export').addEventListener('click',()=>{
-  const fields=['product_id','platform','price_kind','final_price','base_price','observed_at','title','url'];
+  const fields=['product_id','platform','price_kind','final_price','base_price','observed_at','reported_at','reference_only','title','url'];
   const quote=value=>{let s=String(value ?? '');if(/^[=+@\-\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';};
   const csv='\uFEFF'+[fields.join(','),...history.map(row=>fields.map(key=>quote(row[key])).join(','))].join('\r\n');
   const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));

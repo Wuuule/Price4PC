@@ -1,0 +1,23 @@
+{
+  "smzdm_category_urls": [
+    "https://www.smzdm.com/fenlei/cpu/",
+    "https://www.smzdm.com/fenlei/xianka/",
+    "https://www.smzdm.com/fenlei/neicun/",
+    "https://www.smzdm.com/fenlei/yingpan/",
+    "https://www.smzdm.com/fenlei/diannaopeijian/"
+  ],
+  "smzdm_detail_urls": [
+    "https://www.smzdm.com/p/182825776/",
+    "https://www.smzdm.com/p/183730870/",
+    "https://www.smzdm.com/p/183731249/",
+    "https://www.smzdm.com/p/183190068/",
+    "https://www.smzdm.com/p/183473620/",
+    "https://www.smzdm.com/p/174409504/",
+    "https://www.smzdm.com/p/166456466/"
+  ],
+  "manmanbuy_probe_urls": [
+    "https://s.manmanbuy.com/pc/search/result?keyword=9700X",
+    "https://zhekou.manmanbuy.com/search/ct106/0/0/0/1"
+  ],
+  "miaomiaozhe_query_url": "https://www.miaomiaozhe.com/price-history"
+}
