@@ -96,5 +96,19 @@
     "reference_only": true,
     "url": "https://www.smzdm.com/p/183473620/",
     "title": "雷克沙 DDR5 6000 16GB单条 电竞RGB灯条台式内存条 海力士A-die颗粒 C30 战神之刃二代 黑色"
+  },
+  {
+    "id": "9b1d0071626644b14d90",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 4979.0,
+    "base_price": 4979.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-12T11:59:37Z",
+    "reported_at": "2026-10-12T03:42:37Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/183826594/",
+    "title": "技嘉 RX 9070XT GRE 显卡7650GRE 6500 魔鹰"
   }
 ]
