@@ -110,5 +110,33 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/183826594/",
     "title": "技嘉 RX 9070XT GRE 显卡7650GRE 6500 魔鹰"
+  },
+  {
+    "id": "4197710bcc32e5d93fe6",
+    "product_id": "rtx5070ti",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 8399.0,
+    "base_price": 8399.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-13T15:57:40Z",
+    "reported_at": "2026-10-12T16:18:39Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/183867193/",
+    "title": "今日必买：七彩虹 RTX 5070TI 显卡 12G 16G 火神 电竞光追游戏设计电脑显卡"
+  },
+  {
+    "id": "05a09d754d391d9ceb56",
+    "product_id": "rtx5070ti",
+    "platform": "smzdm",
+    "merchant_platform": null,
+    "final_price": 8777.32,
+    "base_price": 8777.32,
+    "price_kind": "reported",
+    "observed_at": "2026-10-13T15:57:40Z",
+    "reported_at": "2026-10-13T04:13:17Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/183890251/",
+    "title": "技嘉 GeForce RTX 5070 Ti Eagle OC SFF 16G 显卡,16GB 256 位 GDDR7,PCIe"
   }
 ]
