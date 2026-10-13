@@ -138,5 +138,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/183890251/",
     "title": "技嘉 GeForce RTX 5070 Ti Eagle OC SFF 16G 显卡,16GB 256 位 GDDR7,PCIe"
+  },
+  {
+    "id": "57e2d1d998a90c4482e0",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 4399.0,
+    "base_price": 4399.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-13T21:14:58Z",
+    "reported_at": "2026-10-13T16:42:40Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/183926752/",
+    "title": "技嘉 AMD RX 9070 XT 16G显卡9070GRE 魔鹰小雕"
   }
 ]
