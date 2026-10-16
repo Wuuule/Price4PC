@@ -166,5 +166,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184073994/",
     "title": "技嘉 AMD RX 9070 XT 16G显卡9070GRE 魔鹰小雕"
+  },
+  {
+    "id": "9e3caf3615c41ac574ff",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 5049.0,
+    "base_price": 5049.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-16T13:15:11Z",
+    "reported_at": "2026-10-16T01:46:20Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184073828/",
+    "title": "技嘉 RX 9070XT显卡 猎鹰/魔鹰/雪鹰"
   }
 ]
