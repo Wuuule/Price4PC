@@ -194,5 +194,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184223485/",
     "title": "技嘉 AMD RX 9070 XT 16G显卡9070GRE 魔鹰小雕"
+  },
+  {
+    "id": "1c93dae162279e952efd",
+    "product_id": "nvme-gen4-1tb",
+    "platform": "smzdm",
+    "merchant_platform": "pdd",
+    "final_price": 849.0,
+    "base_price": 849.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-19T15:35:37Z",
+    "reported_at": "2026-10-19T14:29:27Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184284922/",
+    "title": "宏碁 掠夺者GM7 1TB M.2 NVMe PCIe 4.0读速7200MB/s SSD固态硬盘"
   }
 ]
