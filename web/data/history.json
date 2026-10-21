@@ -208,5 +208,47 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184284922/",
     "title": "宏碁 掠夺者GM7 1TB M.2 NVMe PCIe 4.0读速7200MB/s SSD固态硬盘"
+  },
+  {
+    "id": "3ff03a1b59aafb169fab",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 6034.16,
+    "base_price": 6034.16,
+    "price_kind": "reported",
+    "observed_at": "2026-10-21T13:47:19Z",
+    "reported_at": "2026-10-21T04:01:25Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184422671/",
+    "title": "瀚铠 RX 9070XT 星空显卡+长城1000W 金牌"
+  },
+  {
+    "id": "311eb3530254919a67e2",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 6059.38,
+    "base_price": 6059.38,
+    "price_kind": "reported",
+    "observed_at": "2026-10-21T13:47:19Z",
+    "reported_at": "2026-10-21T08:29:18Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184441552/",
+    "title": "讯景 RX9070XT系列 独立显卡 Ultra 海外版 战狼 RX9070XT 16GB 海外版Ultra白色 OC"
+  },
+  {
+    "id": "0f51b44189f7dd77443f",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 6412.0,
+    "base_price": 6412.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-21T13:47:19Z",
+    "reported_at": "2026-10-21T09:00:17Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184443399/",
+    "title": "瀚铠 AMD RX9070XT超合金搭配致态1T/2TSSD游戏显卡322"
   }
 ]
