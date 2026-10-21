@@ -250,5 +250,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184443399/",
     "title": "瀚铠 AMD RX9070XT超合金搭配致态1T/2TSSD游戏显卡322"
+  },
+  {
+    "id": "8907862d2d0fec0a9402",
+    "product_id": "rtx5070ti",
+    "platform": "smzdm",
+    "merchant_platform": null,
+    "final_price": 9483.68,
+    "base_price": 9483.68,
+    "price_kind": "reported",
+    "observed_at": "2026-10-21T23:18:12Z",
+    "reported_at": "2026-10-21T07:35:18Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184438685/",
+    "title": "GIGABYTE Force RTX 5070 Ti Gaming OC 16G 电竞显卡 GDDR7独显 PCIe 5.0三风扇散热 34×14cm 游戏显卡"
   }
 ]
