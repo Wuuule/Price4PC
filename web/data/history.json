@@ -306,5 +306,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184611948/",
     "title": "AMD 瀚铠 Radeon RX 9070 XT 超合金 16GB 显卡"
+  },
+  {
+    "id": "afb112171bc7dcb703aa",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 4799.04,
+    "base_price": 4799.04,
+    "price_kind": "reported",
+    "observed_at": "2026-10-23T23:14:29Z",
+    "reported_at": "2026-10-22T11:06:07Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184518872/",
+    "title": "盈通 RX9070GRE/9070XT樱瞳水着全新游戏显卡搭AMD锐龙盒装处理器"
   }
 ]
