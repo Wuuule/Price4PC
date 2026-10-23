@@ -292,5 +292,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184536048/",
     "title": "PREDATOR GM7 1TB M.2 NVMe PCIe 4.0读速7200MB/s SSD固态硬盘"
+  },
+  {
+    "id": "83b9163b7339b3b08a0c",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 5700.0,
+    "base_price": 5700.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-23T19:57:47Z",
+    "reported_at": "2026-10-23T16:56:07Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184611948/",
+    "title": "AMD 瀚铠 Radeon RX 9070 XT 超合金 16GB 显卡"
   }
 ]
