@@ -278,5 +278,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184493819/",
     "title": "宏碁 掠夺者(PREDATOR) GM7 1TB 固态硬盘 M.2接口 NVMe PCIe 4.0"
+  },
+  {
+    "id": "c1d17070c1c33d7ac94e",
+    "product_id": "nvme-gen4-1tb",
+    "platform": "smzdm",
+    "merchant_platform": "pdd",
+    "final_price": 819.0,
+    "base_price": 819.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-23T04:47:23Z",
+    "reported_at": "2026-10-22T19:08:16Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184536048/",
+    "title": "PREDATOR GM7 1TB M.2 NVMe PCIe 4.0读速7200MB/s SSD固态硬盘"
   }
 ]
