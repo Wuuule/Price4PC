@@ -320,5 +320,33 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184518872/",
     "title": "盈通 RX9070GRE/9070XT樱瞳水着全新游戏显卡搭AMD锐龙盒装处理器"
+  },
+  {
+    "id": "368074ce487375a8f9af",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 5600.0,
+    "base_price": 5600.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-24T04:34:41Z",
+    "reported_at": "2026-10-24T01:27:28Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184632358/",
+    "title": "澣铠9070XT 星空16g"
+  },
+  {
+    "id": "a7d0c43a5427ddccbf8b",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 5300.0,
+    "base_price": 5300.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-24T04:34:41Z",
+    "reported_at": "2026-10-24T02:15:59Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184635919/",
+    "title": "澣铠9070XT星空 16g"
   }
 ]
