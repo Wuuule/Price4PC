@@ -348,5 +348,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184635919/",
     "title": "澣铠9070XT星空 16g"
+  },
+  {
+    "id": "886188c0f1150c874f19",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 5799.0,
+    "base_price": 5799.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-25T13:11:23Z",
+    "reported_at": "2026-10-25T09:07:11Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184721365/",
+    "title": "技嘉 RX 9070XT/7650GRE 显卡 猎鹰/魔鹰/雪鹰"
   }
 ]
