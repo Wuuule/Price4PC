@@ -362,5 +362,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184721365/",
     "title": "技嘉 RX 9070XT/7650GRE 显卡 猎鹰/魔鹰/雪鹰"
+  },
+  {
+    "id": "6a529075e42af11ec3e4",
+    "product_id": "7800x3d",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 2289.0,
+    "base_price": 2289.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-27T14:31:06Z",
+    "reported_at": "2026-10-27T06:13:08Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184852862/",
+    "title": "AMD 锐龙R7-7800X3D CPU 4.2 GHz 8核16线程"
   }
 ]
