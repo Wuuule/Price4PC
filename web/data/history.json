@@ -376,5 +376,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184852862/",
     "title": "AMD 锐龙R7-7800X3D CPU 4.2 GHz 8核16线程"
+  },
+  {
+    "id": "0fa8dd6faa85a3b96731",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 4999.0,
+    "base_price": 4999.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-28T05:40:25Z",
+    "reported_at": "2026-10-28T02:15:37Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184906318/",
+    "title": "移动端：盈通 RX9070GRE/9070XT樱瞳水着全新游戏显卡搭AMD锐龙盒装处理器"
   }
 ]
