@@ -390,5 +390,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184906318/",
     "title": "移动端：盈通 RX9070GRE/9070XT樱瞳水着全新游戏显卡搭AMD锐龙盒装处理器"
+  },
+  {
+    "id": "17857a37e9e1c257bd4f",
+    "product_id": "nvme-gen4-1tb",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 1199.0,
+    "base_price": 1199.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-29T21:07:19Z",
+    "reported_at": "2026-10-29T09:44:08Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/184996307/",
+    "title": "三星 9100 PRO 1t PCIe4.0 NVMe M.2 固态硬盘"
   }
 ]
