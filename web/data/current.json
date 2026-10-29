@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T05:45:39Z",
+  "updated_at": "2026-10-29T15:13:30Z",
   "offers": [],
   "reference_offers": [
     {
@@ -14,7 +14,7 @@
       "conditions": "什么值得买报料，尚未核实当前成交价；旧报料、已失效或时间未确认，不计入当前最低价",
       "url": "https://www.smzdm.com/p/166456466/",
       "source_url": "https://www.smzdm.com/p/166456466/",
-      "observed_at": "2026-10-29T05:45:39Z",
+      "observed_at": "2026-10-29T15:13:30Z",
       "applied_discounts": [],
       "excluded_discounts": [],
       "reported_date_text": "更新时间：01-11 22:13",
@@ -35,7 +35,7 @@
       "conditions": "什么值得买报料，尚未核实当前成交价；旧报料、已失效或时间未确认，不计入当前最低价",
       "url": "https://www.smzdm.com/p/174409504/",
       "source_url": "https://www.smzdm.com/p/174409504/",
-      "observed_at": "2026-10-29T05:45:39Z",
+      "observed_at": "2026-10-29T15:13:30Z",
       "applied_discounts": [],
       "excluded_discounts": [],
       "reported_date_text": "更新时间：05-17 10:13",
@@ -56,7 +56,7 @@
       "conditions": "什么值得买报料，尚未核实当前成交价；（需用券）；旧报料、已失效或时间未确认，不计入当前最低价",
       "url": "https://www.smzdm.com/p/182825776/",
       "source_url": "https://www.smzdm.com/p/182825776/",
-      "observed_at": "2026-10-29T05:45:39Z",
+      "observed_at": "2026-10-29T15:13:30Z",
       "applied_discounts": [],
       "excluded_discounts": [],
       "reported_date_text": "更新时间：09-22 20:08",
@@ -77,7 +77,7 @@
       "conditions": "什么值得买报料，尚未核实当前成交价；旧报料、已失效或时间未确认，不计入当前最低价",
       "url": "https://www.smzdm.com/p/183473620/",
       "source_url": "https://www.smzdm.com/p/183473620/",
-      "observed_at": "2026-10-29T05:45:39Z",
+      "observed_at": "2026-10-29T15:13:30Z",
       "applied_discounts": [],
       "excluded_discounts": [],
       "reported_date_text": "更新时间：10-05 20:50",
@@ -98,7 +98,7 @@
       "conditions": "什么值得买报料，尚未核实当前成交价；旧报料、已失效或时间未确认，不计入当前最低价",
       "url": "https://www.smzdm.com/p/183730870/",
       "source_url": "https://www.smzdm.com/p/183730870/",
-      "observed_at": "2026-10-29T05:45:39Z",
+      "observed_at": "2026-10-29T15:13:30Z",
       "applied_discounts": [],
       "excluded_discounts": [],
       "reported_date_text": "更新时间：10-10 16:02",
@@ -119,7 +119,7 @@
       "conditions": "什么值得买报料，尚未核实当前成交价；旧报料、已失效或时间未确认，不计入当前最低价",
       "url": "https://www.smzdm.com/p/183731249/",
       "source_url": "https://www.smzdm.com/p/183731249/",
-      "observed_at": "2026-10-29T05:45:39Z",
+      "observed_at": "2026-10-29T15:13:30Z",
       "applied_discounts": [],
       "excluded_discounts": [],
       "reported_date_text": "更新时间：10-10 16:08",
@@ -140,13 +140,34 @@
       "conditions": "什么值得买报料，尚未核实当前成交价；（需用券）；旧报料、已失效或时间未确认，不计入当前最低价",
       "url": "https://www.smzdm.com/p/184422671/",
       "source_url": "https://www.smzdm.com/p/184422671/",
-      "observed_at": "2026-10-29T05:45:39Z",
+      "observed_at": "2026-10-29T15:13:30Z",
       "applied_discounts": [],
       "excluded_discounts": [],
       "reported_date_text": "更新时间：10-21 13:08",
       "reported_at": "2026-10-21T04:01:25Z",
       "report_state": "unverified",
       "merchant_platform": "jd",
+      "reference_only": true
+    },
+    {
+      "id": "0f51b44189f7dd77443f",
+      "product_id": "rx9070xt",
+      "platform": "smzdm",
+      "title": "瀚铠 AMD RX9070XT超合金搭配致态1T/2TSSD游戏显卡322",
+      "base_price": 6412.0,
+      "final_price": 6412.0,
+      "shipping": null,
+      "price_kind": "reported",
+      "conditions": "什么值得买报料，尚未核实当前成交价；旧报料、已失效或时间未确认，不计入当前最低价",
+      "url": "https://www.smzdm.com/p/184443399/",
+      "source_url": "https://www.smzdm.com/p/184443399/",
+      "observed_at": "2026-10-29T15:13:30Z",
+      "applied_discounts": [],
+      "excluded_discounts": [],
+      "reported_date_text": "更新时间：10-21 17:47",
+      "reported_at": "2026-10-21T09:00:17Z",
+      "report_state": "unverified",
+      "merchant_platform": "taobao",
       "reference_only": true
     }
   ],
@@ -157,7 +178,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://search.jd.com/Search?keyword=Intel%20Ultra%207%20270K%20CPU&enc=utf-8",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -166,7 +187,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://search.jd.com/Search?keyword=AMD%207800X3D%20CPU&enc=utf-8",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -175,7 +196,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://search.jd.com/Search?keyword=AMD%209700X%20CPU&enc=utf-8",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -184,7 +205,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://search.jd.com/Search?keyword=RX9070XT%20%E6%98%BE%E5%8D%A1&enc=utf-8",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -193,7 +214,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://search.jd.com/Search?keyword=RTX5070Ti%20%E6%98%BE%E5%8D%A1&enc=utf-8",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -202,7 +223,7 @@
       "status": "no_matches",
       "message": "未提取到符合规格的价格；可能为空、动态加载或页面结构变更",
       "url": "https://search.jd.com/Search?keyword=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98&enc=utf-8",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -211,7 +232,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://search.jd.com/Search?keyword=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81&enc=utf-8",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -220,7 +241,7 @@
       "status": "login_required",
       "message": "需要平台登录才能读取价格",
       "url": "https://s.taobao.com/search?q=Intel%20Ultra%207%20270K%20CPU",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -229,7 +250,7 @@
       "status": "login_required",
       "message": "需要平台登录才能读取价格",
       "url": "https://s.taobao.com/search?q=AMD%207800X3D%20CPU",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -238,7 +259,7 @@
       "status": "login_required",
       "message": "需要平台登录才能读取价格",
       "url": "https://s.taobao.com/search?q=AMD%209700X%20CPU",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -247,7 +268,7 @@
       "status": "login_required",
       "message": "需要平台登录才能读取价格",
       "url": "https://s.taobao.com/search?q=RX9070XT%20%E6%98%BE%E5%8D%A1",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -256,7 +277,7 @@
       "status": "login_required",
       "message": "需要平台登录才能读取价格",
       "url": "https://s.taobao.com/search?q=RTX5070Ti%20%E6%98%BE%E5%8D%A1",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -265,7 +286,7 @@
       "status": "login_required",
       "message": "需要平台登录才能读取价格",
       "url": "https://s.taobao.com/search?q=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -274,7 +295,7 @@
       "status": "login_required",
       "message": "需要平台登录才能读取价格",
       "url": "https://s.taobao.com/search?q=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -283,7 +304,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://mobile.yangkeduo.com/search_result.html?search_key=Intel%20Ultra%207%20270K%20CPU",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -292,7 +313,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://mobile.yangkeduo.com/search_result.html?search_key=AMD%207800X3D%20CPU",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -301,7 +322,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://mobile.yangkeduo.com/search_result.html?search_key=AMD%209700X%20CPU",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -310,7 +331,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://mobile.yangkeduo.com/search_result.html?search_key=RX9070XT%20%E6%98%BE%E5%8D%A1",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -319,7 +340,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://mobile.yangkeduo.com/search_result.html?search_key=RTX5070Ti%20%E6%98%BE%E5%8D%A1",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -328,7 +349,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://mobile.yangkeduo.com/search_result.html?search_key=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -337,7 +358,7 @@
       "status": "blocked",
       "message": "平台安全验证或访问限制",
       "url": "https://mobile.yangkeduo.com/search_result.html?search_key=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -346,7 +367,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=Intel%20Ultra%207%20270K%20CPU&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -355,7 +376,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=AMD%207800X3D%20CPU&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -364,7 +385,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=AMD%209700X%20CPU&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -373,7 +394,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=RX9070XT%20%E6%98%BE%E5%8D%A1&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -382,7 +403,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=RTX5070Ti%20%E6%98%BE%E5%8D%A1&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -391,7 +412,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -400,7 +421,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -409,7 +430,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=Intel%20Ultra%207%20270K%20CPU%20%E5%8F%8C11&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -418,7 +439,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=AMD%207800X3D%20CPU%20%E5%8F%8C11&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -427,7 +448,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=AMD%209700X%20CPU%20%E5%8F%8C11&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -436,7 +457,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=RX9070XT%20%E6%98%BE%E5%8D%A1%20%E5%8F%8C11&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -445,7 +466,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=RTX5070Ti%20%E6%98%BE%E5%8D%A1%20%E5%8F%8C11&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -454,7 +475,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=DDR5%2016GB%20%E5%8D%95%E6%9D%A1%20%E5%8F%B0%E5%BC%8F%E6%9C%BA%20%E5%86%85%E5%AD%98%20%E5%8F%8C11&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -463,7 +484,7 @@
       "status": "blocked",
       "message": "平台返回安全挑战页面（HTTP 202）",
       "url": "https://search.smzdm.com/?c=faxian&s=SSD%20NVMe%20PCIe4.0%201TB%20M.2%20%E5%9B%BA%E6%80%81%20%E5%8F%8C11&order=time&v=b",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -471,15 +492,15 @@
       "status": "no_matches",
       "message": "公开页面可读取；发现 0 条匹配报料链接",
       "url": "https://www.smzdm.com/fenlei/cpu/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
       "platform": "smzdm",
       "status": "ok",
-      "message": "公开页面可读取；发现 2 条匹配报料链接",
+      "message": "公开页面可读取；发现 3 条匹配报料链接",
       "url": "https://www.smzdm.com/fenlei/xianka/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -487,7 +508,7 @@
       "status": "no_matches",
       "message": "公开页面可读取；发现 0 条匹配报料链接",
       "url": "https://www.smzdm.com/fenlei/neicun/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -495,7 +516,7 @@
       "status": "no_matches",
       "message": "公开页面可读取；发现 0 条匹配报料链接",
       "url": "https://www.smzdm.com/fenlei/yingpan/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -503,7 +524,7 @@
       "status": "no_matches",
       "message": "公开页面可读取；发现 0 条匹配报料链接",
       "url": "https://www.smzdm.com/fenlei/diannaopeijian/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -512,7 +533,7 @@
       "status": "ok",
       "message": "读取 1 条报料；近期 0 条，旧报料单独保留",
       "url": "https://www.smzdm.com/p/166456466/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 1
     },
     {
@@ -521,7 +542,7 @@
       "status": "ok",
       "message": "读取 1 条报料；近期 0 条，旧报料单独保留",
       "url": "https://www.smzdm.com/p/174409504/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 1
     },
     {
@@ -530,7 +551,7 @@
       "status": "ok",
       "message": "读取 1 条报料；近期 0 条，旧报料单独保留",
       "url": "https://www.smzdm.com/p/182825776/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 1
     },
     {
@@ -539,7 +560,7 @@
       "status": "no_matches",
       "message": "公开页面可读取；未提取匹配规格的报价",
       "url": "https://www.smzdm.com/p/183190068/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -548,7 +569,7 @@
       "status": "ok",
       "message": "读取 1 条报料；近期 0 条，旧报料单独保留",
       "url": "https://www.smzdm.com/p/183473620/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 1
     },
     {
@@ -557,7 +578,7 @@
       "status": "ok",
       "message": "读取 1 条报料；近期 0 条，旧报料单独保留",
       "url": "https://www.smzdm.com/p/183730870/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 1
     },
     {
@@ -566,7 +587,7 @@
       "status": "ok",
       "message": "读取 1 条报料；近期 0 条，旧报料单独保留",
       "url": "https://www.smzdm.com/p/183731249/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 1
     },
     {
@@ -575,7 +596,16 @@
       "status": "ok",
       "message": "读取 1 条报料；近期 0 条，旧报料单独保留",
       "url": "https://www.smzdm.com/p/184422671/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
+      "count": 1
+    },
+    {
+      "platform": "smzdm",
+      "product_id": "rx9070xt",
+      "status": "ok",
+      "message": "读取 1 条报料；近期 0 条，旧报料单独保留",
+      "url": "https://www.smzdm.com/p/184443399/",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 1
     },
     {
@@ -584,7 +614,7 @@
       "status": "no_matches",
       "message": "公开页面可读取；未提取匹配规格的报价",
       "url": "https://www.smzdm.com/p/184611948/",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -592,15 +622,15 @@
       "status": "error",
       "message": "ConnectTimeout：无法读取公开页面；尚未打通自动价格读取",
       "url": "https://s.manmanbuy.com/pc/search/result?keyword=9700X",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
       "platform": "manmanbuy",
-      "status": "blocked",
-      "message": "公开页面返回人机验证，停止读取；尚未打通自动价格读取",
+      "status": "error",
+      "message": "ConnectTimeout：无法读取公开页面；尚未打通自动价格读取",
       "url": "https://zhekou.manmanbuy.com/search/ct106/0/0/0/1",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     },
     {
@@ -608,7 +638,7 @@
       "status": "needs_link",
       "message": "历史价查询需要具体商品链接，可能要求授权；尚未接入自动价格数据",
       "url": "https://www.miaomiaozhe.com/price-history",
-      "checked_at": "2026-10-29T05:45:39Z",
+      "checked_at": "2026-10-29T15:13:30Z",
       "count": 0
     }
   ],
