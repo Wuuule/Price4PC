@@ -418,5 +418,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185035508/",
     "title": "蓝宝石 RX 9070 XT 台式机独立显卡"
+  },
+  {
+    "id": "78675175e39a40348a96",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 6242.99,
+    "base_price": 6242.99,
+    "price_kind": "reported",
+    "observed_at": "2026-10-30T15:02:29Z",
+    "reported_at": "2026-10-30T12:56:50Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185083557/",
+    "title": "盈通 AMD RADEON RX 9070 XT 16GB GDDR6 破茧电竞显卡"
   }
 ]
