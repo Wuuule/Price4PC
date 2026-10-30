@@ -404,5 +404,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/184996307/",
     "title": "三星 9100 PRO 1t PCIe4.0 NVMe M.2 固态硬盘"
+  },
+  {
+    "id": "163dfe9abb0328c0f2f9",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 3765.0,
+    "base_price": 3765.0,
+    "price_kind": "reported",
+    "observed_at": "2026-10-30T05:46:02Z",
+    "reported_at": "2026-10-30T03:05:40Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185035508/",
+    "title": "蓝宝石 RX 9070 XT 台式机独立显卡"
   }
 ]
