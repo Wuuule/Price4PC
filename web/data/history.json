@@ -432,5 +432,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185083557/",
     "title": "盈通 AMD RADEON RX 9070 XT 16GB GDDR6 破茧电竞显卡"
+  },
+  {
+    "id": "df3b917e9d5d2963838c",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 6424.68,
+    "base_price": 6424.68,
+    "price_kind": "reported",
+    "observed_at": "2026-10-31T05:38:06Z",
+    "reported_at": "2026-10-31T03:14:19Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185138515/",
+    "title": "讯景 RX9070XT系列 独立显卡 Ultra 海外版 战狼 RX9070XT 16G 海外版Ultra黑色 OC"
   }
 ]
