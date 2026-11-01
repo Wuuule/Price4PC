@@ -474,5 +474,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185225024/",
     "title": "国家补贴、88VIP：宏碁 N7000 1TB NVMe固态硬盘 PCIe4.0 M.2"
+  },
+  {
+    "id": "6547d3bc9b12d95faaf5",
+    "product_id": "ultra7-270k",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 2366.1,
+    "base_price": 2366.1,
+    "price_kind": "reported",
+    "observed_at": "2026-11-01T20:30:01Z",
+    "reported_at": "2026-11-01T15:37:23Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185240566/",
+    "title": "英特尔 酷睿 270k+技嘉z890m冰雕"
   }
 ]
