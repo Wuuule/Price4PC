@@ -460,5 +460,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185129662/",
     "title": "华硕 TUF GAMING B850M-PLUS WIFI7 重炮手主板 CPU 7800X3D"
+  },
+  {
+    "id": "cdceed8b06fda1c27754",
+    "product_id": "nvme-gen4-1tb",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 760.37,
+    "base_price": 760.37,
+    "price_kind": "reported",
+    "observed_at": "2026-11-01T15:06:05Z",
+    "reported_at": "2026-11-01T09:22:24Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185225024/",
+    "title": "国家补贴、88VIP：宏碁 N7000 1TB NVMe固态硬盘 PCIe4.0 M.2"
   }
 ]
