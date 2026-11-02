@@ -488,5 +488,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185240566/",
     "title": "英特尔 酷睿 270k+技嘉z890m冰雕"
+  },
+  {
+    "id": "f5473d6240ca90ea2344",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 6788.0,
+    "base_price": 6788.0,
+    "price_kind": "reported",
+    "observed_at": "2026-11-02T05:59:14Z",
+    "reported_at": "2026-10-31T02:00:24Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185129732/",
+    "title": "蓝宝石 AMD RADEON RX 7900 XTX/9070XT 系列"
   }
 ]
