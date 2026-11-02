@@ -502,5 +502,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185129732/",
     "title": "蓝宝石 AMD RADEON RX 7900 XTX/9070XT 系列"
+  },
+  {
+    "id": "8f39516b130efd55419a",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 6165.0,
+    "base_price": 6165.0,
+    "price_kind": "reported",
+    "observed_at": "2026-11-02T18:20:58Z",
+    "reported_at": "2026-11-02T13:05:37Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185303705/",
+    "title": "讯景 9070XT 海外PRO 16G 高规格游戏显卡"
   }
 ]
