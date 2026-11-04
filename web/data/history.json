@@ -516,5 +516,33 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185303705/",
     "title": "讯景 9070XT 海外PRO 16G 高规格游戏显卡"
+  },
+  {
+    "id": "8a9a2cdda9dd1626eb10",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 6919.68,
+    "base_price": 6919.68,
+    "price_kind": "reported",
+    "observed_at": "2026-11-04T12:06:56Z",
+    "reported_at": "2026-11-03T09:47:18Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185357134/",
+    "title": "瀚铠 AMD Radeon RX 9070 XT 超合金 Pro 显卡 1T："
+  },
+  {
+    "id": "e26804d314f9cac80c8f",
+    "product_id": "nvme-gen4-1tb",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 760.37,
+    "base_price": 760.37,
+    "price_kind": "reported",
+    "observed_at": "2026-11-04T12:06:56Z",
+    "reported_at": "2026-11-04T09:28:28Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185430120/",
+    "title": "88VIP：宏碁 N7000 1TB NVMe固态硬盘 PCIe4.0 M.2"
   }
 ]
