@@ -544,5 +544,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185430120/",
     "title": "88VIP：宏碁 N7000 1TB NVMe固态硬盘 PCIe4.0 M.2"
+  },
+  {
+    "id": "ef9090b8c60824a830fd",
+    "product_id": "nvme-gen4-1tb",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 655.0,
+    "base_price": 655.0,
+    "price_kind": "reported",
+    "observed_at": "2026-11-04T19:44:26Z",
+    "reported_at": "2026-11-04T04:41:08Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185413026/",
+    "title": "致态 长江存储7100S/Ti600 500G/1TB NVMe PCIe4.0接口M.2固态硬盘"
   }
 ]
