@@ -558,5 +558,33 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185413026/",
     "title": "致态 长江存储7100S/Ti600 500G/1TB NVMe PCIe4.0接口M.2固态硬盘"
+  },
+  {
+    "id": "72fa4a7241d3c6d953c6",
+    "product_id": "nvme-gen4-1tb",
+    "platform": "smzdm",
+    "merchant_platform": "pdd",
+    "final_price": 519.0,
+    "base_price": 519.0,
+    "price_kind": "reported",
+    "observed_at": "2026-11-05T12:18:12Z",
+    "reported_at": "2026-11-04T18:30:14Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185449373/",
+    "title": "1TB  M.2 NVMe PCIe 4.0台式机笔记本 SSD固态硬盘"
+  },
+  {
+    "id": "3b6c3e823a33366f32ad",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": null,
+    "final_price": 5099.0,
+    "base_price": 5099.0,
+    "price_kind": "reported",
+    "observed_at": "2026-11-05T12:18:12Z",
+    "reported_at": "2026-11-05T03:02:08Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185468639/",
+    "title": "盈通 RX9070gre/9070XT 16G花嫁水着游戏电竞直播视频剪辑独立显卡"
   }
 ]
