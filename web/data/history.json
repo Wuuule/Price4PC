@@ -586,5 +586,33 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185468639/",
     "title": "盈通 RX9070gre/9070XT 16G花嫁水着游戏电竞直播视频剪辑独立显卡"
+  },
+  {
+    "id": "b76d2d3dd0a22004714d",
+    "product_id": "nvme-gen4-1tb",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 760.37,
+    "base_price": 760.37,
+    "price_kind": "reported",
+    "observed_at": "2026-11-07T14:53:44Z",
+    "reported_at": "2026-11-07T09:35:07Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185628577/",
+    "title": "88VIP：宏碁 N7000 1TB NVMe固态硬盘 PCIe4.0 M.2"
+  },
+  {
+    "id": "e9bacfca623961f652cb",
+    "product_id": "nvme-gen4-1tb",
+    "platform": "smzdm",
+    "merchant_platform": "pdd",
+    "final_price": 809.0,
+    "base_price": 809.0,
+    "price_kind": "reported",
+    "observed_at": "2026-11-07T14:53:44Z",
+    "reported_at": "2026-11-07T14:30:19Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185639592/",
+    "title": "GM7 1TB  M.2 NVMe PCIe 4.0台式机笔记本 SSD固态硬盘"
   }
 ]
