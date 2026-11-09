@@ -614,5 +614,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185639592/",
     "title": "GM7 1TB  M.2 NVMe PCIe 4.0台式机笔记本 SSD固态硬盘"
+  },
+  {
+    "id": "a116c20c24770452f5e5",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 4838.85,
+    "base_price": 4838.85,
+    "price_kind": "reported",
+    "observed_at": "2026-11-09T06:23:22Z",
+    "reported_at": "2026-11-09T06:12:28Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185732937/",
+    "title": "移动端：蓝宝石 RADEON RX 9070 XT 16G 脉动 AI人工智能渲染 显卡  12GB,16GB"
   }
 ]
