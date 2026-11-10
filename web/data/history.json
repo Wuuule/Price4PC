@@ -628,5 +628,33 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185732937/",
     "title": "移动端：蓝宝石 RADEON RX 9070 XT 16G 脉动 AI人工智能渲染 显卡  12GB,16GB"
+  },
+  {
+    "id": "3145a3c90b2f6c32dbe3",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 6374.86,
+    "base_price": 6374.86,
+    "price_kind": "reported",
+    "observed_at": "2026-11-10T12:41:18Z",
+    "reported_at": "2026-11-09T16:02:19Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185787506/",
+    "title": "盈通 AMD RADEON RX 9070 XT 16GB 破茧 GDDR6 电竞显卡"
+  },
+  {
+    "id": "e3cb7f09e4d0b9688d25",
+    "product_id": "ultra7-270k",
+    "platform": "smzdm",
+    "merchant_platform": "taobao",
+    "final_price": 2366.1,
+    "base_price": 2366.1,
+    "price_kind": "reported",
+    "observed_at": "2026-11-10T12:41:18Z",
+    "reported_at": "2026-11-10T11:29:15Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185863191/",
+    "title": "英特尔 酷睿 270k+技嘉z890m冰雕"
   }
 ]
