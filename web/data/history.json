@@ -656,5 +656,19 @@
     "reference_only": false,
     "url": "https://www.smzdm.com/p/185863191/",
     "title": "英特尔 酷睿 270k+技嘉z890m冰雕"
+  },
+  {
+    "id": "1af46d3b60e058307c12",
+    "product_id": "rx9070xt",
+    "platform": "smzdm",
+    "merchant_platform": "jd",
+    "final_price": 5899.0,
+    "base_price": 5899.0,
+    "price_kind": "reported",
+    "observed_at": "2026-11-10T21:48:17Z",
+    "reported_at": "2026-11-09T15:46:28Z",
+    "reference_only": false,
+    "url": "https://www.smzdm.com/p/185786389/",
+    "title": "POWERCOLOR AMD RX9070XT 游荡者 16G"
   }
 ]
